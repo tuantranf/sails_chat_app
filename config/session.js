@@ -15,7 +15,7 @@ module.exports.session = {
   // Session secret is automatically generated when your new app is created
   // Replace at your own risk in production-- you will invalidate the cookies of your users,
   // forcing them to log in again. 
-  secret: '68fd910f4e24d129f2bf03fe50aae25c'
+  secret: '68fd910f4e24d129f2bf03fe50aae25c',
 
 
   // In production, uncomment the following lines to set up a shared redis session store
@@ -35,7 +35,7 @@ module.exports.session = {
 
 
   // Uncomment the following lines to use your Mongo adapter as a session store
-  // adapter: 'mongo',
+  adapter: 'mongo',
   //
   // host: 'localhost',
   // port: 27017,
@@ -45,7 +45,7 @@ module.exports.session = {
   // Optional Values:
   //
   // # Note: url will override other connection settings
-  // url: 'mongodb://user:pass@host:port/database/collection',
+  url: process.env.MONGOHQ_URL ? process.env.MONGOHQ_URL + '/sessions' : 'mongodb://localhost:27017/sails/sessions'
   //
   // username: '',
   // password: '',
