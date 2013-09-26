@@ -9,24 +9,26 @@
  */
 
 module.exports.routes = {
+
 	'/' : {
 		controller: 'main',
 		action: 'index'
 	},
-	'/signup' : {
-		controller: 'user',
-		action: 'signup'
-	},
-	'/login' : {
-		controller: 'user',
-		action: 'login'
-	},
-	'/logout' : {
-		controller: 'user',
-		action: 'logout'
-	},
 	'/chat' : {
 		controller: 'main',
 		action: 'chat'
+	},
+	'/signup' : {
+		controller: 'auth',
+		action: 'signup'
+	},
+	'/login' : {
+		controller: 'auth',
+		action: 'login'
+	},
+	'/logout' : {
+		controller: 'auth',
+		action: 'logout'
 	}
+
 };

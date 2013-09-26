@@ -8,7 +8,7 @@ var hasher = require("password-hash");
 
 module.exports = {
 
-  	signup: function (req, res) {
+	signup: function (req, res) {
 		var username = req.param("username");
 		var password = req.param("password");
 
