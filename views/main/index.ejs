@@ -17,6 +17,13 @@
     $("#loginButton").click(function(){
         var username = $("#loginName").val();
         var password = $("#loginPassword").val();
+
+        var characterReg = /^\s*[a-zA-Z0-9,\s]+\s*$/;
+        if(!characterReg.test(username) || !characterReg.test(password)) {
+            alert('No special characters allowed.'); 
+            return;
+        }
+
         if (username && password) {
             $.post(
                 '/login',
@@ -35,6 +42,12 @@
         var username = $("#signupName").val();
         var password = $("#signupPassword").val();
         var confirmPassword = $("#signupConfirmPassword").val();
+
+        var characterReg = /^\s*[a-zA-Z0-9,\s]+\s*$/;
+        if(!characterReg.test(username) || !characterReg.test(password) || !characterReg.test(confirmPassword)) {
+            alert('No special characters allowed.');
+            return;
+        }
         if (username && password) {
             if (password === confirmPassword) {
                 $.post(

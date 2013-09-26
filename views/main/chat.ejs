@@ -57,9 +57,14 @@
     var messages = new MessageCollection();
     messages.fetch();
 
+    // html escape
+    function escapeHTML(val) {
+        return $("<div/>").text(val).html();
+    }
+
     $("#postMessageButton").click(function(){
         var messageText = $("#message").val();
-        messages.create({message: messageText}, {wait: true});
+        messages.create({message: escapeHTML(messageText)}, {wait: true});
         $("#message").val("");
     });
 
