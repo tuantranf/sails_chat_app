@@ -25,4 +25,8 @@ module.exports.routes = {
 		controller: 'user',
 		action: 'logout'
 	},
+	'/chat' : {
+		controller: 'main',
+		action: 'chat'
+	}
 };

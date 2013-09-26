@@ -4,12 +4,19 @@
  * @module		:: Controller
  * @description	:: Contains logic for handling requests.
  */
-var hasher = require("password-hash");
 
 module.exports = {
 
 	index: function (req, res) {
 		res.view();
+	},
+
+	chat: function (req, res) {
+		if (req.session.user) {
+			res.view({username: req.session.user.username});
+		} else {
+			res.redirect('/');
+		}
 	}
 
 };

@@ -22,8 +22,7 @@
                 '/login',
                 {username: username, password:password},
                 function () {
-                    alert("OK");
-                    //window.location = "/chat";
+                    window.location = "/chat";
                 }
             ).fail(function(res){
                 alert("Error: " + res.responseText);
@@ -42,8 +41,7 @@
                     '/signup',
                     {username: username, password:password},
                     function (res) {
-                        alert("OK");
-                        //window.location = "/chat";
+                        window.location = "/chat";
                     }
                 ).fail(function(res){
                     alert("Error: " + res.responseText);
