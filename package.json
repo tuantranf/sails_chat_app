@@ -1,8 +1,8 @@
 {
     "name": "sailChat",
     "private": true,
-    "version": "0.0.0",
-    "description": "a Sails application",
+    "version": "0.0.1",
+    "description": "a Sails chat application on heroku",
     "dependencies": {
         "sails": "0.9.4",
         "grunt": "0.4.1",
@@ -12,12 +12,18 @@
         "sails-mongo": "~0.9.5",
         "password-hash": "~1.2.1"
     },
+    "engines": {
+      "node": "0.10.17"
+    },
     "scripts": {
         "start": "node app.js",
         "debug": "node debug app.js"
     },
     "main": "app.js",
-    "repository": "",
-    "author": "",
+    "repository": {
+      "type": "git",
+      "url": "git@github.com:tuanmt/sails_chat_app.git"
+    },
+    "author": "tuandongdu@gmail.com",
     "license": ""
 }
