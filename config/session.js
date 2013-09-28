@@ -45,7 +45,7 @@ module.exports.session = {
   // Optional Values:
   //
   // # Note: url will override other connection settings
-  url: process.env.MONGOHQ_URL ? process.env.MONGOHQ_URL + '/sessions' : 'mongodb://localhost:27017/sails/sessions'
+  url: process.env.MONGOHQ_URL ? process.env.MONGOHQ_URL + '/sails/sessions' : 'mongodb://localhost:27017/sails/sessions'
   //
   // username: '',
   // password: '',
